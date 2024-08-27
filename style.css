@@ -1,0 +1,268 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ======================================= */
+/* start */
+/* 盒模型 */
+*, *::before,*::after{
+    box-sizing: border-box;
+    /* 顯示框線以確認切版正確性 */
+    /* outline: solid 1px; */
+}
+
+/* basic */
+body {
+    font-family: "Roboto", "Noto Sans TC", serif;
+    line-height: 1.5;
+}
+a{
+    /* 不顯示下底線 */
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+a:hover:not(.logo) {
+    opacity: 0.7;
+  }
+  
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.container{
+    max-width: 1320px;
+    /* 置中 */
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* ===================================== */
+/* header */
+.header {
+    padding: 12px;
+}
+.logo {
+    width: 80px;
+}
+.menu {
+    font-size: 20px;
+    margin-left: auto;
+}
+.menu li {
+    padding-left: 64px;
+}
+
+/* header RWD =============== */
+
+/* 手機尺寸 */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 12px 0;
+        width: 100%;
+    }
+
+    .logo {
+        margin: 12px;
+    }
+
+    .menu {
+        padding: 0px;
+        margin: 0px;
+        font-size: 16px;
+        flex-wrap: wrap;
+    }
+
+    .menu li {
+        width: 50%;
+        border: 1px #fff solid;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .menu li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+}
+
+/* ================================ */
+/* footer */
+.footer {
+    padding-top: 48px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.fmenu {
+    font-size: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.fmenu li {
+    height: 48px;
+    margin-right: 48px;
+    align-items: center;
+}
+
+/* =================================== */
+.contact {
+    font-size: 36px;
+    flex-direction: column;
+}
+
+.contact li {
+    font-family: "Noto Sans TC", serif;
+    align-items: center;
+}
+
+.icon36 {
+    font-size: 36px;
+    padding-right: 22px;
+}
+
+.icon40 {
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+/* ================================= */
+.soical li {
+    width: 48px;
+    margin-left: 32px;
+}
+
+.copyright {
+    border-top: 1px #fff solid;
+    font-size: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.privacy {
+    margin-left: auto;
+}
+
+.privacy li {
+    padding-left: 48px;
+}
+
+/* footer RWD =============== */
+/* 手機尺寸 */
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .fmenu {
+        display: none;
+    }
+
+    .soical li {
+        width: 24px;
+        margin-left: 8px;
+    }
+
+    .contact {
+        font-size: 16px;
+    }
+
+    .contact li {
+        padding-bottom: 8px;
+    }
+
+    .icon36 {
+        font-size: 18px;
+        padding-right: 11px;
+    }
+
+    .icon40 {
+        font-size: 20px;
+        padding-right: 10px;
+    }
+
+    .copyright {
+        border-top: 1px #fff solid;
+        font-size: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        flex-direction: column;
+    }
+
+    .privacy {
+        flex-direction: column;
+        padding-top: 8px;
+        margin-left: unset;
+    }
+
+    .privacy li {
+        font-size: 16px;
+        padding-left: 0px;
+        padding-bottom: 8px;
+    }
+}
+
+/* ====================================== */
+/* share */
+.bg-primary {
+    background-color: #AA0601;
+}
+.text-white {
+    color: #fff;
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
