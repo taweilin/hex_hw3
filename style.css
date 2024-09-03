@@ -99,6 +99,10 @@ img{
 .menu li {
     padding-left: 64px;
 }
+/* 範圍內可點選 */
+.menu li a {
+    display: block;
+}
 
 /* header RWD =============== */
 
@@ -144,6 +148,7 @@ img{
     justify-content: space-between;
 }
 .fmenu {
+    display: flex;
     font-size: 16px;
     margin-bottom: 24px;
     align-items: center;
